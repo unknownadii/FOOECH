@@ -31,9 +31,6 @@ class MainActivity : AppCompatActivity() {
 
         drawer_navigation_view.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.nav_home -> Toast.makeText(
-                    this, "home selected", Toast.LENGTH_SHORT
-                ).show()
                 R.id.navEditProfile -> Toast.makeText(
                     this, "edit selected", Toast.LENGTH_SHORT
                 ).show()

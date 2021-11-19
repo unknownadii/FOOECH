@@ -13,7 +13,16 @@
         android:theme="@style/Theme.FOOECH">
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/coustomActionBarsecond"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".PreStoreRecipe.RecipeActivity"
             android:exported="true"
@@ -24,11 +33,6 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/coustomActionBarsecond">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

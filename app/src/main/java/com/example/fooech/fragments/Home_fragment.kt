@@ -32,7 +32,7 @@ import kotlin.collections.HashMap
 
 
 class home_fragment : Fragment(R.layout.fragment_home_fragment) {
-    val apiKey = "Type your own Api Key Here"
+    val apiKey = "2e53e98f75a34cd8af3f98f05f1f4bce"
    // val date = "2021-10-18"
 
     lateinit var adapter: HomeAdapter
