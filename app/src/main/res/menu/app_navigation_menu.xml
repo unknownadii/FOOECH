@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/nav_home"
+    android:title="Home"
+    android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/navEditProfile"
+        android:title="Edit Profile"
+        android:icon="@drawable/ic_baseline_edit_24"/>
+    <item
+        android:id="@+id/navTerm"
+        android:title="Term&amp;Conditions"
+        android:icon="@drawable/ic_term"/>
+    <item
+        android:id="@+id/navPrivacy"
+        android:title="Privacy Policy"
+        android:icon="@drawable/ic_privacy"/>
+    <item
+        android:id="@+id/navLogout"
+        android:title="LogOut"
+        android:icon="@drawable/ic_logout"/>
+</menu>
