@@ -4,31 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".RegisterActivity"
-    android:gravity="center">
+    tools:context=".RegisterActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="@string/app_name"
-        android:textSize="50sp"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_margin="20dp"/>
+        android:textSize="50sp"
+        android:textStyle="bold" />
     <!-- Register part -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
         android:visibility="gone"
-        >
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
@@ -41,6 +43,7 @@
                 app:boxCornerRadiusTopStart="20dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_register_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"
@@ -48,6 +51,7 @@
                     android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
@@ -60,6 +64,7 @@
                 app:boxCornerRadiusTopStart="20dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_register_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Username"
@@ -67,6 +72,7 @@
                     android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
@@ -79,6 +85,7 @@
                 app:boxCornerRadiusTopStart="20dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_register_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
@@ -87,38 +94,41 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-                <Button
-                    android:id="@+id/btn_register"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center"
-                    android:text="Register"
-                    android:background="@drawable/button_frame"/>
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_frame"
+                android:text="Register" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
     <LinearLayout
+        android:id="@+id/ll_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_margin="20dp"
-        android:visibility="gone"
-        android:id="@+id/ll_register">
+        android:gravity="center"
+        android:visibility="gone">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already Have An Account :-"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
+
         <TextView
             android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="  LOGIN"
-            android:textStyle="bold"
+            android:textColor="@color/black"
             android:textSize="15sp"
-            android:textColor="@color/black"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <!-- Login part -->
@@ -128,12 +138,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        >
+        app:cardElevation="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
@@ -146,6 +157,7 @@
                 app:boxCornerRadiusTopStart="20dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_login_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"
@@ -153,6 +165,7 @@
                     android:textSize="18sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
@@ -165,6 +178,7 @@
                 app:boxCornerRadiusTopStart="20dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_login_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
@@ -185,24 +199,29 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
     <LinearLayout
+        android:id="@+id/ll_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_margin="20dp"
-        android:id="@+id/ll_login">
+        android:gravity="center">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Don't Have An Account :-"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
+
         <TextView
             android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="  REGISTER"
-            android:textStyle="bold"
+            android:textColor="@color/black"
             android:textSize="15sp"
-            android:textColor="@color/black"/>
+            android:textStyle="bold" />
     </LinearLayout>
+
+
 </LinearLayout>

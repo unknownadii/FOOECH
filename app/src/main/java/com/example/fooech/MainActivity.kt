@@ -1,19 +1,30 @@
 package com.example.fooech
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.fragment.app.Fragment
 import com.example.fooech.fragments.*
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.bottomNavigationView
+import kotlinx.android.synthetic.main.activity_privacy_and_term.*
+import kotlinx.android.synthetic.main.nav_header.*
 
 
 class MainActivity : AppCompatActivity() {
+    lateinit var auth: FirebaseAuth
     lateinit var toggle: ActionBarDrawerToggle
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,18 +42,28 @@ class MainActivity : AppCompatActivity() {
 
         drawer_navigation_view.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.navEditProfile -> Toast.makeText(
-                    this, "edit selected", Toast.LENGTH_SHORT
-                ).show()
-                R.id.navTerm -> Toast.makeText(
-                    this, "term and condtion selected", Toast.LENGTH_SHORT
-                ).show()
-                R.id.navPrivacy -> Toast.makeText(
-                    this, "privacy selected", Toast.LENGTH_SHORT
-                ).show()
-                R.id.navLogout -> Toast.makeText(
-                    this, "logout selected", Toast.LENGTH_SHORT
-                ).show()
+
+                R.id.navTerm -> {
+                      val intent=  Intent(
+                            this,PrivacyAndTermActivity::class.java)
+                    intent.putExtra("name","term")
+                    startActivity(intent)
+
+                }
+                R.id.navPrivacy -> {
+                    val intent=  Intent(
+                        this,PrivacyAndTermActivity::class.java)
+                    intent.putExtra("name","privacy")
+                    startActivity(intent)
+                }
+                R.id.navLogout -> {
+                    Firebase.auth.signOut()
+                    startActivity(Intent(this, RegisterActivity::class.java))
+                    finish()
+                    Toast.makeText(
+                        this, "loging out", Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
             true
         }
@@ -68,21 +89,13 @@ class MainActivity : AppCompatActivity() {
                     createFragment(searchFragment)
 
                 }
-                R.id.add_button -> {
-                    hideAppBar()
-                    createFragment(addFragment)
 
-                }
                 R.id.explore_icon -> {
                     hideAppBar()
                     createFragment(exploreFragment)
 
                 }
-                R.id.profile_icon -> {
-                    hideAppBar()
-                    createFragment(profileFragment)
 
-                }
             }
             true
         }
@@ -117,5 +130,7 @@ class MainActivity : AppCompatActivity() {
     private fun setAppBar() {
         supportActionBar?.show()
     }
+
+
 }
 

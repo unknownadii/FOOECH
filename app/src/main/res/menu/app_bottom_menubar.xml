@@ -10,19 +10,11 @@
         android:title="Explore"
         android:icon="@drawable/fork"
         />
-    <item
-        android:id="@+id/add_button"
-        android:title="Add Recipe"
-        android:icon="@drawable/more"
-        />
+
     <item
         android:id="@+id/explore_icon"
         android:title="Recipe"
         android:icon="@drawable/chef"
         />
-    <item
-        android:id="@+id/profile_icon"
-        android:title="Profile"
-        android:icon="@drawable/ic_baseline_person_outline_24"
-        />
+
 </menu>

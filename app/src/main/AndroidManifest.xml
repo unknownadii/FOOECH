@@ -12,11 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FOOECH">
         <activity
+            android:name=".PrivacyAndTermActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/coustomActionBarsecond"/>
+        <activity
             android:name=".RegisterActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/coustomActionBarsecond"
-            >
+            android:theme="@style/coustomActionBarsecond">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,8 +36,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/coustomActionBarsecond">
-        </activity>
+            android:theme="@style/coustomActionBarsecond"></activity>
     </application>
 
 </manifest>

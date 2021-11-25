@@ -9,4 +9,21 @@
                        making several interpretations plausible.
                        A common aspect of ambiguity is uncertainty.
     </string>
+    <string name="Privacy">
+        A privacy policy is a statement or legal document (in privacy law)
+        that discloses some or all of the ways a party gathers, uses, discloses, and manages a customer or client\'s data.[1] Personal information can be anything that can be used to identify an individual, not limited to the person\'s name, address, date of birth, marital status, contact information, ID issue, and expiry date, financial records, credit information, medical history, where one travels, and intentions to acquire goods and services.[2] In the case of a business, it is often a statement that declares a party\'s policy on how it collects, stores, and releases personal information it collects. It informs the client what specific information is collected, and whether it is kept confidential, shared with partners, or sold to other firms or enterprises[3].[4] Privacy policies typically represent a broader, more generalized treatment, as opposed to data use statements,
+        which tend to be more detailed and specific
+        The exact contents of a certain privacy policy will
+        depend upon the applicable law and may need to address
+        requirements across geographical boundaries and legal
+        jurisdictions. Most countries have their own legislation
+        and guidelines of who is covered, what information can be collected,
+        and what it can be used for. In general, data protection laws
+        in Europe cover the private sector, as well as the public sector.
+        Their privacy laws apply not only to government operations
+        but also to private enterprises and commercial transactions
+    </string>
+    <string name="Term">
+        Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as TOS or ToS, ToU or T&amp;C) are the legal agreements between a service provider and a person who wants to use that service. The person must agree to abide by the terms of service in order to use the offered service.[1] Terms of service can also be merely a disclaimer, especially regarding the use of websites. Vague language and lengthy sentences used in the terms of use have brought concerns on customer privacy and raised public awareness in many ways.
+    </string>
 </resources>
